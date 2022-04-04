@@ -1,0 +1,11 @@
+{
+    "reporter":"mochawesome",
+    "reporterOptions": {
+
+    },
+    "testFiles": "**/*.{feature,features}",
+    "defaultCommandTimeout": 20000,
+    "env": {
+        "default": "http://localhost:3000/"
+    }
+}
