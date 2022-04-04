@@ -64,7 +64,6 @@ export default function PhoneDetails({open, phone, onClose}) {
           {phone.name}
         </DialogTitle>
         <DialogContent dividers>
-          <Typography gutterBottom>
               <div><label sx={style.labelDetails}>{t('price')}</label> {phone.price}</div>
               <div><label sx={style.labelDetails}>{t('description')}</label> {phone.description} </div>
               <div><label sx={style.labelDetails}>{t('manufacturer')}</label> {phone.manufacturer}</div>
@@ -72,7 +71,6 @@ export default function PhoneDetails({open, phone, onClose}) {
               <div><label sx={style.labelDetails}>{t('screen')}</label> {phone.screen}</div>
               <div><label sx={style.labelDetails}>{t('processor')}</label> {phone.processor}</div>
               <div><label sx={style.labelDetails}>{t('RAM')}</label> {phone.ram}</div>
-          </Typography>
         </DialogContent>
       </Dialog>
     </div>

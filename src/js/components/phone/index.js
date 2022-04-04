@@ -97,8 +97,7 @@ const Phone = ({language, savePhone}) => {
       errorList = {...errorList, description: 'error'}
     }
     setErrors(errorList)
-    savePhone(phone)
-    isEmpty(errorList) && setSuccess(true)
+    isEmpty(errorList) && savePhone(phone) && setSuccess(true)
   };
 
   return (

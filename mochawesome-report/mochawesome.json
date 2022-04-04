@@ -1,14 +1,14 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 1,
-    "passes": 1,
+    "tests": 2,
+    "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2022-04-03T22:27:54.379Z",
-    "end": "2022-04-03T22:27:58.782Z",
-    "duration": 4403,
-    "testsRegistered": 1,
+    "start": "2022-04-04T16:11:20.036Z",
+    "end": "2022-04-04T16:11:25.647Z",
+    "duration": 5611,
+    "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "7a80e03c-b583-4209-80af-a76b1080cc4e",
+      "uuid": "1eca8fec-55c9-4c0d-afcd-303ea30da337",
       "title": "",
       "fullFile": "cypress/integration/getPhones.feature",
       "file": "cypress/integration/getPhones.feature",
@@ -27,18 +27,18 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "096019f3-95d3-47c4-a454-64e8a1416a16",
-          "title": "Smart Tagging",
+          "uuid": "d6d05d41-083d-4d19-ada2-b448230db16b",
+          "title": "Testing phone catalog",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "This scenario should not run if @focus is on another scenario",
-              "fullTitle": "Smart Tagging This scenario should not run if @focus is on another scenario",
+              "title": "As a user I can see the list of phones",
+              "fullTitle": "Testing phone catalog As a user I can see the list of phones",
               "timedOut": null,
-              "duration": 2223,
+              "duration": 2520,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,20 +47,39 @@
               "context": null,
               "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
               "err": {},
-              "uuid": "6f10dfb6-5151-405d-a233-ba0b01090ef2",
-              "parentUUID": "096019f3-95d3-47c4-a454-64e8a1416a16",
+              "uuid": "becff5bc-2807-42ed-b0ad-38cae229168b",
+              "parentUUID": "d6d05d41-083d-4d19-ada2-b448230db16b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "As a user I can mark as favorite a phone",
+              "fullTitle": "Testing phone catalog As a user I can mark as favorite a phone",
+              "timedOut": null,
+              "duration": 895,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "cbd3e43b-8ff2-4724-80fe-39d15c6858ca",
+              "parentUUID": "d6d05d41-083d-4d19-ada2-b448230db16b",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "6f10dfb6-5151-405d-a233-ba0b01090ef2"
+            "becff5bc-2807-42ed-b0ad-38cae229168b",
+            "cbd3e43b-8ff2-4724-80fe-39d15c6858ca"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 2223,
+          "duration": 3415,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

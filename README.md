@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Getting Started with App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -6,10 +6,18 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `npm install`
+
 ### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+To launch cypress to run the e2e testing, you have the script:
+
+### `npm run cypress:report`
+
+When the execution finish you will see a generated report with the result of the e2e testing
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
