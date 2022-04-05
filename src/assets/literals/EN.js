@@ -11,5 +11,12 @@ export default {
     screen: 'Screen',
     processor: 'Procesador',
     ram: 'RAM',
-    description: 'Description'
+    description: 'Description',
+    add: 'Add',
+    successPhone: 'Phone added successfully!',
+    deletePhone: phone => `Delete phone ${phone}`,
+    sureDelete: phone => `Are you sure you want to delete the phone ${phone}?`,
+    messageDelete: 'This item will be deleted inmediately. You can\'t undo this action',
+    close: 'Close',
+    delete: 'Delete'
 }

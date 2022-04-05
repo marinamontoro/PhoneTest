@@ -22,7 +22,8 @@
     "redux-thunk": "^2.4.1",
     "styled-components": "^5.3.5",
     "theme-ui": "^0.14.2",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "wouter": "^2.8.0-alpha.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -58,5 +59,6 @@
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true
-  }
+  },
+  "proxy": "http://localhost:8080"
 }

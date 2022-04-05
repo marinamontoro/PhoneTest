@@ -2,17 +2,14 @@ import React, { useContext } from 'react'
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import * as style from './style'
-
 import { withStyles } from '@material-ui/core/styles';
 import Dialog from '@material-ui/core/Dialog';
 import MuiDialogTitle from '@material-ui/core/DialogTitle';
 import MuiDialogContent from '@material-ui/core/DialogContent';
-import MuiDialogActions from '@material-ui/core/DialogActions';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import Typography from '@material-ui/core/Typography';
 import { I18nContext } from '../../containers/i18n'
-
 
 const styles = (theme) => ({
   root: {
@@ -47,15 +44,8 @@ const DialogContent = withStyles((theme) => ({
   },
 }))(MuiDialogContent);
 
-const DialogActions = withStyles((theme) => ({
-  root: {
-    margin: 0,
-    padding: theme.spacing(1),
-  },
-}))(MuiDialogActions);
-
 export default function PhoneDetails({open, phone, onClose}) {
-    const { t } = useContext(I18nContext)
+  const { t } = useContext(I18nContext)
 
   return (
     <div>
@@ -64,13 +54,13 @@ export default function PhoneDetails({open, phone, onClose}) {
           {phone.name}
         </DialogTitle>
         <DialogContent dividers>
-              <div><label sx={style.labelDetails}>{t('price')}</label> {phone.price}</div>
-              <div><label sx={style.labelDetails}>{t('description')}</label> {phone.description} </div>
-              <div><label sx={style.labelDetails}>{t('manufacturer')}</label> {phone.manufacturer}</div>
-              <div><label sx={style.labelDetails}>{t('color')}</label> {phone.color}</div>
-              <div><label sx={style.labelDetails}>{t('screen')}</label> {phone.screen}</div>
-              <div><label sx={style.labelDetails}>{t('processor')}</label> {phone.processor}</div>
-              <div><label sx={style.labelDetails}>{t('RAM')}</label> {phone.ram}</div>
+          <div><label sx={style.labelDetails}>{t('price')}</label> {phone.price}</div>
+          <div><label sx={style.labelDetails}>{t('description')}</label> {phone.description} </div>
+          <div><label sx={style.labelDetails}>{t('manufacturer')}</label> {phone.manufacturer}</div>
+          <div><label sx={style.labelDetails}>{t('color')}</label> {phone.color}</div>
+          <div><label sx={style.labelDetails}>{t('screen')}</label> {phone.screen}</div>
+          <div><label sx={style.labelDetails}>{t('processor')}</label> {phone.processor}</div>
+          <div><label sx={style.labelDetails}>{t('RAM')}</label> {phone.ram}</div>
         </DialogContent>
       </Dialog>
     </div>

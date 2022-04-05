@@ -7,7 +7,7 @@ const buildFilesFormData = files =>
 const replacer = (_, value) => (typeof value === 'string' ? value || null : value)
 
 export default class Api {
-  constructor(options = { baseUrl: 'api/', defaultOptions: {} }) {
+  constructor(options = { baseUrl: '/', defaultOptions: {} }) {
     this.baseUrl = options.baseUrl
     this.defaultOptions = {
       credentials: 'same-origin',

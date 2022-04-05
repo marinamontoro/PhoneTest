@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2022-04-04T16:11:20.036Z",
-    "end": "2022-04-04T16:11:25.647Z",
-    "duration": 5611,
+    "start": "2022-04-05T14:14:55.618Z",
+    "end": "2022-04-05T14:15:01.058Z",
+    "duration": 5440,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "1eca8fec-55c9-4c0d-afcd-303ea30da337",
+      "uuid": "4ab80a6e-c3c1-4b78-a5a2-c82add4c0ca4",
       "title": "",
       "fullFile": "cypress/integration/getPhones.feature",
       "file": "cypress/integration/getPhones.feature",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "d6d05d41-083d-4d19-ada2-b448230db16b",
+          "uuid": "107c10ec-9519-46ee-a723-3a7472de5e67",
           "title": "Testing phone catalog",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "As a user I can see the list of phones",
               "fullTitle": "Testing phone catalog As a user I can see the list of phones",
               "timedOut": null,
-              "duration": 2520,
+              "duration": 2341,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
               "err": {},
-              "uuid": "becff5bc-2807-42ed-b0ad-38cae229168b",
-              "parentUUID": "d6d05d41-083d-4d19-ada2-b448230db16b",
+              "uuid": "3661ce00-11bf-47b0-a4fe-f6a8af4df34c",
+              "parentUUID": "107c10ec-9519-46ee-a723-3a7472de5e67",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "As a user I can mark as favorite a phone",
               "fullTitle": "Testing phone catalog As a user I can mark as favorite a phone",
               "timedOut": null,
-              "duration": 895,
+              "duration": 871,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,21 +65,21 @@
               "context": null,
               "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
               "err": {},
-              "uuid": "cbd3e43b-8ff2-4724-80fe-39d15c6858ca",
-              "parentUUID": "d6d05d41-083d-4d19-ada2-b448230db16b",
+              "uuid": "0a312c81-0eb3-41b0-9c1f-4fb4063f73c8",
+              "parentUUID": "107c10ec-9519-46ee-a723-3a7472de5e67",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "becff5bc-2807-42ed-b0ad-38cae229168b",
-            "cbd3e43b-8ff2-4724-80fe-39d15c6858ca"
+            "3661ce00-11bf-47b0-a4fe-f6a8af4df34c",
+            "0a312c81-0eb3-41b0-9c1f-4fb4063f73c8"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 3415,
+          "duration": 3212,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

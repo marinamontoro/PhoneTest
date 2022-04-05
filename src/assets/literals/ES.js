@@ -11,5 +11,12 @@ export default {
     screen: 'Pantalla',
     processor: 'Procesador',
     ram: 'RAM',
-    description: 'Descripción'
+    description: 'Descripción',
+    add: 'Añadir',
+    successPhone: 'Teléfono guardado correctamente!',
+    deletePhone: phone => `Borrar teléfono ${phone}`,
+    sureDelete: phone => `Está seguro que quiere borrar el teléfono ${phone}?`,
+    messageDelete: 'Este item será borrado inmediatamente. No podrá deshacer esta acción',
+    close: 'Cerrar',
+    delete: 'Borrar'
 }

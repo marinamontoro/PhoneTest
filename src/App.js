@@ -1,13 +1,41 @@
-import React from 'react';
+import React, { useEffect } from 'react'
+
 import './App.css';
 import Menu from './js/containers/Menu';
+import { fetchCatalog } from './js/actions/catalog'
+import { connect } from 'react-redux'
+import { Route, Switch, Redirect } from 'wouter'
+import { ROOT } from '../src/js/common/routes'
+import CircularProgress from '@material-ui/core/CircularProgress'
 
-function App() {
-  return (
-    <div className="App">
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"></link>
-      <Menu/>
-    </div> 
-  )}
+const getInitialData = () => dispatch =>
+  Promise.all([
+    dispatch(fetchCatalog())
+  ])
 
-export default App;
+const App = ({ catalogFetched, getInitialData }) => {
+  useEffect(() => {
+    getInitialData()
+  }, [])
+
+
+  return catalogFetched ? (
+    <Switch>
+      <Route path={ROOT}>{props => <Menu />}</Route>
+      <Redirect to={ROOT} />
+    </Switch>
+  ) : (
+    <CircularProgress  size={50} />
+  )
+}
+
+  const mapStateToProps = ({
+    catalog: { fetched: catalogFetched },
+  }) => ({
+    catalogFetched,
+  })
+  const mapDispatchToProps = {  getInitialData }
+  
+  export default connect(mapStateToProps, mapDispatchToProps)(App)
+
+

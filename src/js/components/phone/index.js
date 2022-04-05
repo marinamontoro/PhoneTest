@@ -1,12 +1,9 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
-//import {useStyles} from './style'
-import { connect } from 'react-redux'
-
-import React, { useState, useContext, useEffect } from 'react'
+import React, { useState, useContext } from 'react'
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-
+import { connect } from 'react-redux'
 import { makeStyles } from '@material-ui/core/styles';
 import { I18nContext } from '../../containers/i18n'
 import { savePhone } from '../../actions/catalog';
@@ -61,13 +58,12 @@ const defaultPhone ={
 }
 
 
-const Phone = ({language, savePhone}) => {
+const Phone = ({ savePhone }) => {
   const classes = useStyles();
   const { t } = useContext(I18nContext)
   const [phone, setPhone] = useState(defaultPhone)
   const [errors, setErrors] = useState({})
   const [success, setSuccess] = useState(false)
-  const [selectedFile, setSelectedFile] = useState(null);
 
   const handleChange = (e, type) => {
     type && setPhone({...phone, [type]: e.target.value})
@@ -97,24 +93,27 @@ const Phone = ({language, savePhone}) => {
       errorList = {...errorList, description: 'error'}
     }
     setErrors(errorList)
-    isEmpty(errorList) && savePhone(phone) && setSuccess(true)
+    if(isEmpty(errorList)) {
+      savePhone({...phone, imageFileName: 'IPhone_8.png'}); 
+      setSuccess(true);
+    }
   };
 
   return (
   <div>
-      <h2>Add phone</h2>
+      <h2>{t('addPhone')}</h2>
       {!success ? 
       <form className={classes.root}>
         <div >
           <div className={classes.form}>
             <TextField required className={classes.textField} id="standard-required" label={t('name')} onChange={e=>handleChange(e,'name')}  error={!!errors.name}/>
-            <TextField required className={classes.textField} id="standard-disabled" label="Manufacturer" onChange={e=>handleChange(e,'manufacturer')}  error={!!errors.manufacturer}/>
-            <TextField required className={classes.textField} id="standard-disabled" label="Color" onChange={e=>handleChange(e,'color')}  error={!!errors.color}/>
-            </div>
-            <div className={classes.form}>
-            <TextField required className={classes.textField} id="standard-disabled" label="Screen" onChange={e=>handleChange(e,'screen')}  error={!!errors.screen}/>
-            <TextField required className={classes.textField} id="standard-disabled" label="Processor" onChange={e=>handleChange(e,'processor')} error={!!errors.processor}/>
-            <TextField required className={classes.textField} id="standard-disabled" label="Ram" onChange={e=>handleChange(e,'ram')}  error={!!errors.ram}/>
+            <TextField required className={classes.textField} id="standard-disabled" label={t('manufacturer')} onChange={e=>handleChange(e,'manufacturer')}  error={!!errors.manufacturer}/>
+            <TextField required className={classes.textField} id="standard-disabled" label={t('color')} onChange={e=>handleChange(e,'color')}  error={!!errors.color}/>
+          </div>
+          <div className={classes.form}>
+            <TextField required className={classes.textField} id="standard-disabled" label={t('screen')} onChange={e=>handleChange(e,'screen')}  error={!!errors.screen}/>
+            <TextField required className={classes.textField} id="standard-disabled" label={t('processor')} onChange={e=>handleChange(e,'processor')} error={!!errors.processor}/>
+            <TextField required className={classes.textField} id="standard-disabled" label={t('ram')} onChange={e=>handleChange(e,'ram')}  error={!!errors.ram}/>
           </div>
           <div className={classes.formFile}>
             <TextField 
@@ -123,7 +122,7 @@ const Phone = ({language, savePhone}) => {
               maxRows={10} 
               className={classes.textDesc} 
               id="standard-disabled" 
-              label="Description" 
+              label={t('description')} 
               onChange={e=>handleChange(e,'description')}  
               error={!!errors.description}/>
             <FileInput/>
@@ -132,25 +131,25 @@ const Phone = ({language, savePhone}) => {
           onChange={(e) => setSelectedFile(e.target.files[0])}/> */}
           <div className={classes.button}>
             <Button variant="contained" color="primary" onClick={()=>handleSave(phone)}>
-              Add
+              {t('add')}
             </Button>
           </div>  
         </div>
       </form>
       :
       <div>
-        <Alert severity="success">The phone is added!</Alert>
+        <Alert severity="success">{t('successPhone')}</Alert>
       </div>
     }
   </div>
   )
 }
 
-const mapStateToProps = ({catalog: {language, view, fav, phoneList, fetched: catalogFetched}}) => ({
+const mapStateToProps = ({catalog: {language, view, fav, catalog, fetched: catalogFetched}}) => ({
   language,
   view,
   fav,
-  phoneList,
+  catalog,
   catalogFetched
 })
 const mapDispatchToProps = {

@@ -1,7 +1,7 @@
 /** @jsx jsx */
-import { jsx, useColorMode } from 'theme-ui'
+import { jsx , useColorMode} from 'theme-ui'
 
-import React, { useState, useEffect, useRef, useContext } from 'react'
+import React, { useEffect, useContext } from 'react'
 import clsx from 'clsx';
 import { connect } from 'react-redux'
 

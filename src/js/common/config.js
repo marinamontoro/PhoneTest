@@ -1,10 +1,8 @@
-
-
 const config = () => {
 
       return {
         urls: {
-          baseUrl: 'http://localhost/',
+          baseUrl: 'http://localhost:8080',
         }
       }
 }
