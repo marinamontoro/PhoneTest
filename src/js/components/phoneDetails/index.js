@@ -54,7 +54,7 @@ export default function PhoneDetails({open, phone, onClose}) {
           {phone.name}
         </DialogTitle>
         <DialogContent dividers>
-          <div><label sx={style.labelDetails}>{t('price')}</label> {phone.price}</div>
+          <div><label sx={style.labelDetails}>{t('price')}</label> {phone.price}€</div>
           <div><label sx={style.labelDetails}>{t('description')}</label> {phone.description} </div>
           <div><label sx={style.labelDetails}>{t('manufacturer')}</label> {phone.manufacturer}</div>
           <div><label sx={style.labelDetails}>{t('color')}</label> {phone.color}</div>
