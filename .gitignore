@@ -36,6 +36,5 @@ yarn-debug.log*
 yarn-error.log*
 
 # Generated reports
-*.png
 *.html
 *.mp4

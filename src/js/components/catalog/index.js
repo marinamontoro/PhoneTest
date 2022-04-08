@@ -22,7 +22,8 @@ import CustomModal from '../modal';
 const useStyles = makeStyles({
   root: {
     width: 295,
-    height: 500
+    height: 500,
+    margin: 5
   },
   container:{
     display: 'flex',
@@ -41,7 +42,6 @@ const useStyles = makeStyles({
       color:'red'
   },
   description: {
-    display: 'block',
     display: '-webkit-box',
     maxWidth: '100%',
     height: '43px',
