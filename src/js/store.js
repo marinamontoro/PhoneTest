@@ -12,7 +12,7 @@ const logger = createLogger({
   collapsed: (_, __, logEntry) => !logEntry.error,
 })
 
-const middleware = [promise(), thunk, ... [logger]]
+const middleware = [promise(), thunk, ...[logger]]
 const store = createStore(reducers, compose(applyMiddleware(...middleware)))
 
 export default store

@@ -1,22 +1,4 @@
 export default {
     phoneCatalog: 'Phone catalog',
-    phoneList: 'Phone list',
-    favourites: 'Favourites',
-    addPhone: 'Add phone',
-    name: 'Name',
-    emptyFav: 'The favourite list is empty',
-    price: 'Price',
-    manufacturer: 'Manufacturer',
-    color: 'Color',
-    screen: 'Screen',
-    processor: 'Procesador',
-    ram: 'RAM',
-    description: 'Description',
-    add: 'Add',
-    successPhone: 'Phone added successfully!',
-    deletePhone: phone => `Delete phone ${phone}`,
-    sureDelete: phone => `Are you sure you want to delete the phone ${phone}?`,
-    messageDelete: 'This item will be deleted inmediately. You can\'t undo this action',
-    close: 'Close',
-    delete: 'Delete'
+    emptyList: 'The list is empty'
 }

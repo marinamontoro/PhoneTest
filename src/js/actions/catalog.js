@@ -11,28 +11,3 @@ export const fetchCatalog = () => dispatch => {
     payload: api.fetch('/phones'),
   })
 }
-
-export const setLanguage = payload => ({
-  type: 'SET_LANGUAGE',
-  payload,
-})
-
-export const changeView = payload => ({
-  type: 'CHANGE_VIEW',
-  payload,
-})
-
-export const setFav = payload => ({
-  type: 'SET_FAV',
-  payload,
-})
-
-export const savePhone = payload => ({
-  type: 'SAVE_PHONE',
-  payload,
-})
-
-export const deletePhone = payload => ({
-  type: 'DELETE_PHONE',
-  payload,
-})

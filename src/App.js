@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react'
 
 import './App.css';
-import Menu from './js/containers/Menu';
 import { fetchCatalog } from './js/actions/catalog'
 import { connect } from 'react-redux'
 import { Route, Switch, Redirect } from 'wouter'
 import { ROOT } from '../src/js/common/routes'
 import CircularProgress from '@material-ui/core/CircularProgress'
+import Catalog from './js/components/catalog';
 
 const getInitialData = () => dispatch =>
   Promise.all([
@@ -18,10 +18,9 @@ const App = ({ catalogFetched, getInitialData }) => {
     getInitialData()
   }, [])
 
-
   return catalogFetched ? (
     <Switch>
-      <Route path={ROOT}>{props => <Menu />}</Route>
+      <Route path={ROOT}>{props => <Catalog />}</Route>
       <Redirect to={ROOT} />
     </Switch>
   ) : (
